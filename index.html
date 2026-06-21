@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arjun VG - Power BI Developer Portfolio">
+    <title>Arjun VG | Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+    <!-- Preloader removed for performance -->
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+
+
+    <!-- Navigation -->
+    <nav id="navbar" data-aos="fade-down" data-aos-duration="1000">
+        <div class="nav-wrapper">
+            <div class="logo">A<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Floating Tech Icons -->
+        <div class="floating-icons">
+            <i class="fas fa-chart-bar float-icon" style="top:15%;left:10%;animation-delay:0s;"></i>
+            <i class="fas fa-database float-icon" style="top:25%;right:15%;animation-delay:1.5s;"></i>
+            <i class="fas fa-robot float-icon" style="top:60%;left:5%;animation-delay:3s;"></i>
+            <i class="fas fa-cogs float-icon" style="top:70%;right:8%;animation-delay:0.5s;"></i>
+            <i class="fas fa-code float-icon" style="top:40%;left:20%;animation-delay:2s;"></i>
+            <i class="fas fa-project-diagram float-icon" style="top:80%;left:50%;animation-delay:4s;"></i>
+            <i class="fab fa-microsoft float-icon" style="top:10%;right:30%;animation-delay:2.5s;"></i>
+            <i class="fas fa-server float-icon" style="top:50%;right:25%;animation-delay:1s;"></i>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                <p class="subtitle scramble">HELLO, I'M</p>
+                <h1 class="title glitch" data-text="ARJUN VG">ARJUN VG</h1>
+                <h2 class="role">Power BI Developer & <br> <span class="highlight">Power Platform</span> Consultant</h2>
+                <div class="typewriter-wrapper">
+                    <span class="typewriter-prefix">I build </span>
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:ushasarjun@gmail.com" data-tooltip="Email Me"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+919895564318" data-tooltip="Call Me"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/arjun-vg/" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="#about" class="btn btn-primary">Discover More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+                <div class="img-wrapper">
+                    <div class="profile-ring"></div>
+                    <img src="arjun.jpg" alt="Arjun VG Portrait" class="fancy-profile-pic">
+                    <div class="img-accent"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#bottom">
+                <span>Scroll Down</span>
+                <i class="fas fa-long-arrow-alt-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Infinite Marquee Section -->
+    <div class="marquee-container" id="bottom">
+        <div class="marquee-content">
+            <span>POWER BI DEVELOPER</span><span class="dot">•</span>
+            <span>DATA MODELING</span><span class="dot">•</span>
+            <span>PROCESS AUTOMATION</span><span class="dot">•</span>
+            <span>DAX & SQL</span><span class="dot">•</span>
+            <span>MICROSOFT FABRIC</span><span class="dot">•</span>
+            <span>POWER BI DEVELOPER</span><span class="dot">•</span>
+            <span>DATA MODELING</span><span class="dot">•</span>
+            <span>PROCESS AUTOMATION</span><span class="dot">•</span>
+            <span>DAX & SQL</span><span class="dot">•</span>
+            <span>MICROSOFT FABRIC</span><span class="dot">•</span>
+        </div>
+    </div>
+
+    
+    </div>
+
+<!-- About Section (Bento Box) -->
+    <section id="about" class="about section-padding relative-section" style="padding-top: 150px; min-height: 100vh;">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        
+        <div class="container relative-z">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <p class="section-subtitle">01. INTRODUCTION</p>
+                <h2 class="section-title">About Me.</h2>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-card bio-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <h3 class="bento-title">Who I Am</h3>
+                    <p>I am a Power BI Developer and Power Platform Consultant obsessed with transforming operational data into actionable business insights. With a strong background in Business Intelligence, MIS Reporting, Process Automation, and Data Analytics, I design interactive dashboards and develop robust data models that drive strategic decisions.</p>
+                    <p>My expertise spans HR, Operations, Utilities, and Mortgage domains, allowing me to understand unique business challenges and deliver tailored automation and reporting solutions.</p>
+                </div>
+                
+                <div class="bento-card stats-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <div class="stat-box">
+                        <span class="stat-number scramble">4+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number scramble">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number scramble">50+</span>
+                        <span class="stat-label">Dashboards Built</span>
+                    </div>
+                </div>
+                
+                <div class="bento-card focus-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <h3 class="bento-title">My Focus</h3>
+                    <ul class="focus-list">
+                        <li><i class="fas fa-bolt"></i> Interactive Dashboards & KPI Development</li>
+                        <li><i class="fas fa-database"></i> Scalable Data Modeling & ETL workflows</li>
+                        <li><i class="fas fa-robot"></i> Robotic Process Automation (RPA)</li>
+                        <li><i class="fas fa-link"></i> Seamless Microsoft Fabric & SAP Integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Power BI Spotlight Section -->
+    <section id="powerbi" class="skills section-padding relative-section" style="padding-top: 150px;">
+        <div class="blob blob-1"></div>
+        <div class="container relative-z">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <p class="section-subtitle">02. CORE FOCUS</p>
+                <h2 class="section-title">Power BI & Analytics.</h2>
+            </div>
+            
+            <div class="bento-grid" style="margin-bottom: 50px;">
+                <div class="bento-card" style="grid-column: span 2;" data-aos="fade-right" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <h3 class="bento-title"><i class="fas fa-chart-line" style="color:var(--accent-color);"></i> Dashboard Excellence</h3>
+                    <p style="margin-bottom: 20px;">I specialize in engineering high-impact executive dashboards and deep-dive analytical tools using advanced DAX and Power Query. I've designed solutions that track manpower costs, sales performance, and SLA compliance, boosting overall user engagement by over 40% across departments.</p>
+                    <div class="badges">
+                        <span class="skill-badge magnetic-badge">Data Modeling</span>
+                        <span class="skill-badge magnetic-badge">Advanced DAX</span>
+                        <span class="skill-badge magnetic-badge">Power Query (M)</span>
+                        <span class="skill-badge magnetic-badge">Row-Level Security</span>
+                    </div>
+                </div>
+                
+                <div class="data-sources-container" style="grid-column: span 1;" data-aos="fade-left">
+                    <h4 style="margin-bottom: 15px; font-family: 'Poppins'; color: var(--text-dark);">Data Sources Handled</h4>
+                    <div class="data-sources-list">
+                        <div class="source-item">
+                            <div class="source-icon" style="background: rgba(239, 35, 60, 0.1); color: #ef233c;"><i class="fas fa-database"></i></div>
+                            <div class="source-text">
+                                <h5>SQL Server</h5>
+                                <span>Enterprise DBs</span>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-icon" style="background: rgba(43, 45, 66, 0.1); color: #2b2d42;"><i class="fas fa-server"></i></div>
+                            <div class="source-text">
+                                <h5>SAP HANA / BW</h5>
+                                <span>ERP Integration</span>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-icon" style="background: rgba(0, 210, 255, 0.1); color: #00d2ff;"><i class="fab fa-microsoft"></i></div>
+                            <div class="source-text">
+                                <h5>SharePoint</h5>
+                                <span>Lists & Folders</span>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-icon" style="background: rgba(141, 153, 174, 0.1); color: #8d99ae;"><i class="fas fa-file-excel"></i></div>
+                            <div class="source-text">
+                                <h5>Excel / CSV</h5>
+                                <span>Flat Files</span>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-icon" style="background: rgba(255, 117, 140, 0.1); color: #ff758c;"><i class="fas fa-network-wired"></i></div>
+                            <div class="source-text">
+                                <h5>Web APIs</h5>
+                                <span>RESTful Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Radar & Cloud) -->
+    <section id="skills" class="skills section-padding bg-light relative-section">
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        
+        <div class="container relative-z">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <p class="section-subtitle">03. EXPERTISE</p>
+                <h2 class="section-title">Technical Skills.</h2>
+            </div>
+            
+            <div class="skills-layout">
+                <div class="bars-container" data-aos="fade-right">
+                    <h3 style="margin-bottom: 25px; font-family: 'Poppins'; color: var(--text-dark);">Core Competencies</h3>
+                    
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info">
+                            <span class="skill-name">Power BI</span>
+                            <span class="skill-pct">95%</span>
+                        </div>
+                        <div class="progress-line"><span class="skill-progress-bar" data-width="95%"></span></div>
+                    </div>
+                    
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info">
+                            <span class="skill-name">DAX</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="progress-line"><span class="skill-progress-bar" data-width="90%"></span></div>
+                    </div>
+
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="progress-line"><span class="skill-progress-bar" data-width="85%"></span></div>
+                    </div>
+
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info">
+                            <span class="skill-name">Data Modeling</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="progress-line"><span class="skill-progress-bar" data-width="90%"></span></div>
+                    </div>
+                    
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info">
+                            <span class="skill-name">Fabric</span>
+                            <span class="skill-pct">80%</span>
+                        </div>
+                        <div class="progress-line"><span class="skill-progress-bar" data-width="80%"></span></div>
+                    </div>
+                </div>
+                
+                <div class="badge-cloud" data-aos="fade-left">
+                    <div class="badge-category">
+                        <h4>Core BI & Analytics</h4>
+                        <div class="badges">
+                            <span class="skill-badge magnetic-badge">Power BI</span>
+                            <span class="skill-badge magnetic-badge">DAX</span>
+                            <span class="skill-badge magnetic-badge">Power Query</span>
+                            <span class="skill-badge magnetic-badge">Data Modeling</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-category">
+                        <h4>Automation & Platforms</h4>
+                        <div class="badges">
+                            <span class="skill-badge magnetic-badge">Power Automate</span>
+                            <span class="skill-badge magnetic-badge">Power Apps</span>
+                            <span class="skill-badge magnetic-badge">UiPath (RPA)</span>
+                            <span class="skill-badge magnetic-badge">SharePoint</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-category">
+                        <h4>Data & Engineering</h4>
+                        <div class="badges">
+                            <span class="skill-badge magnetic-badge">SQL</span>
+                            <span class="skill-badge magnetic-badge">ETL Pipelines</span>
+                            <span class="skill-badge magnetic-badge">SAP Integration</span>
+                            <span class="skill-badge magnetic-badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RPA Showcase Section -->
+    <section id="rpa" class="skills section-padding relative-section" style="min-height: 80vh;">
+        <div class="blob blob-2"></div>
+        
+        <div class="container relative-z">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <p class="section-subtitle">04. AUTOMATION IMPACT</p>
+                <h2 class="section-title">Robotic Process Automation.</h2>
+            </div>
+
+            <!-- RPA Visual Showcase -->
+            <div class="rpa-showcase">
+                <!-- Main RPA Hero Card -->
+                <div class="rpa-hero-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rpa-hero-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Bots That Work While You Sleep</h3>
+                    <p>From simple Power Automate flows for notifications to massive unattended UiPath architectures processing thousands of mortgage and HR records daily.</p>
+                    <div class="rpa-flow-visual">
+                        <div class="flow-step">
+                            <div class="flow-dot"></div>
+                            <span>Identify</span>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="flow-step">
+                            <div class="flow-dot"></div>
+                            <span>Design</span>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="flow-step">
+                            <div class="flow-dot"></div>
+                            <span>Automate</span>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="flow-step">
+                            <div class="flow-dot active"></div>
+                            <span>Scale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool Cards Row -->
+                <div class="rpa-tools-grid">
+                    <div class="rpa-tool-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="tool-icon-wrapper uipath">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>UiPath Studio</h4>
+                        <p>Unattended bots for enterprise-scale data processing & record management</p>
+                        <div class="tool-tag">Enterprise RPA</div>
+                    </div>
+
+                    <div class="rpa-tool-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="tool-icon-wrapper pauto">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Power Automate</h4>
+                        <p>Cloud flows for approvals, notifications, and SharePoint integrations</p>
+                        <div class="tool-tag">Cloud Flows</div>
+                    </div>
+
+                    <div class="rpa-tool-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="tool-icon-wrapper integration">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h4>API Integrations</h4>
+                        <p>REST API connectors bridging SAP, SharePoint, SQL & custom systems</p>
+                        <div class="tool-tag">Connectors</div>
+                    </div>
+                </div>
+
+                <!-- Impact Visual -->
+                <div class="rpa-impact-strip" data-aos="fade-up" data-aos-delay="500">
+                    <div class="impact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Hours Saved Daily</span>
+                    </div>
+                    <div class="impact-divider"></div>
+                    <div class="impact-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Zero-Error Processing</span>
+                    </div>
+                    <div class="impact-divider"></div>
+                    <div class="impact-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>24/7 Bot Uptime</span>
+                    </div>
+                    <div class="impact-divider"></div>
+                    <div class="impact-item">
+                        <i class="fas fa-users"></i>
+                        <span>Cross-Department Scale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Experience Section (Interactive Tabs) -->
+    <section id="experience" class="experience section-padding relative-section" style="padding-top: 150px; min-height: 100vh;">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        
+        <div class="container relative-z">
+            <div class="section-title-wrapper" data-aos="fade-up">
+                <p class="section-subtitle">05. MY RESUME</p>
+                <h2 class="section-title">Work History.</h2>
+            </div>
+            
+            <div class="work-grid" data-aos="fade-up">
+                
+                <div class="bento-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <div class="work-header">
+                        <i class="fas fa-chart-line work-icon"></i>
+                        <h3 class="bento-title">Power BI Developer</h3>
+                        <div class="company">@ Applexus Technologies</div>
+                        <p class="date">07/2024 – Present | Deputed via ESC Utility Services</p>
+                    </div>
+                    <ul class="job-duties">
+                        <li>Led end-to-end development of enterprise-level Power BI applications, creating highly scalable data models using Power Query & DAX.</li>
+                        <li>Designed sophisticated BI ecosystems by embedding Power Apps and Power Automate within Power BI to track manpower costs & sales seamlessly.</li>
+                        <li>Created high-impact executive dashboards, boosting overall user engagement by 40%.</li>
+                        <li>Engineered automated data refresh pipelines, reducing manual effort by 30% across the department.</li>
+                    </ul>
+                </div>
+
+                <div class="bento-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <div class="work-header">
+                        <i class="fas fa-robot work-icon"></i>
+                        <h3 class="bento-title">Associate RPA & Digitalization</h3>
+                        <div class="company">@ ESC Utility PVT LTD</div>
+                        <p class="date">04/2023 – 07/2024</p>
+                    </div>
+                    <ul class="job-duties">
+                        <li>Designed, built, and maintained UiPath automation solutions for business-critical operations, significantly reducing processing times.</li>
+                        <li>Managed complete RPA project lifecycles from requirement analysis through to deployment, testing, and production support.</li>
+                        <li>Built complex Power BI dashboards to continuously monitor RPA project performance, bot utilization, and SLA compliance.</li>
+                        <li>Developed low-code Power Apps and Automate solutions to streamline internal business workflows.</li>
+                    </ul>
+                </div>
+
+                <div class="bento-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <div class="work-header">
+                        <i class="fas fa-file-invoice-dollar work-icon"></i>
+                        <h3 class="bento-title">Process Associate</h3>
+                        <div class="company">@ Ecesis Care PVT LTD</div>
+                        <p class="date">07/2022 – 07/2023</p>
+                    </div>
+                    <ul class="job-duties">
+                        <li>Managed operational activities for highly sensitive U.S. mortgage valuation vendor accounts.</li>
+                        <li>Prepared complex daily and weekly operational reports tracking order volumes, SLAs, and processing bottlenecks.</li>
+                        <li>Maintained and analyzed large volumes of operational data using Advanced Excel to support leadership workflow monitoring.</li>
+                    </ul>
+                </div>
+
+                <div class="bento-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <div class="work-header">
+                        <i class="fas fa-headset work-icon"></i>
+                        <h3 class="bento-title">Process Associate</h3>
+                        <div class="company">@ Ecesis Care PVT LTD</div>
+                        <p class="date">01/2021 – 11/2021</p>
+                    </div>
+                    <ul class="job-duties">
+                        <li>Managed comprehensive U.S. mortgage accounts for multiple high-value clients.</li>
+                        <li>Ensured the timely processing of new orders while maintaining rigorous quality control standards.</li>
+                        <li>Provided exceptional B2B customer service and resolved complex order discrepancies.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Education & Certs -->
+    <section id="education" class="education section-padding relative-section" style="padding-top: 150px; min-height: 100vh;">
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+
+        <div class="container relative-z">
+            <div class="edu-grid">
+                
+                <div class="edu-column" data-aos="fade-right">
+                    <div class="section-title-wrapper">
+                        <p class="section-subtitle">06. ACADEMICS</p>
+                        <h2 class="section-title">Education.</h2>
+                    </div>
+                    <div class="edu-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-details">
+                            <span class="date">07/2015 – 04/2019</span>
+                            <h3>B.E. in Mechanical Engineering</h3>
+                            <h4>Narayanaguru College of Engineering</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-column" data-aos="fade-left">
+                    <div class="section-title-wrapper">
+                        <p class="section-subtitle">07. CREDENTIALS</p>
+                        <h2 class="section-title">Certifications.</h2>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-axis="x">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Microsoft Learn Badges</h4>
+                                <p>Data Modeling, DAX, Report Design, Semantic Models, Fabric</p>
+                            </div>
+                        </div>
+                        <div class="cert-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-axis="x">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Design and Manage Analytics Solutions using Power BI</h4>
+                                <p>Microsoft Learn</p>
+                            </div>
+                        </div>
+                        <div class="cert-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-axis="x">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>UiPath Academy RPA Developer Foundation</h4>
+                            </div>
+                        </div>
+                        <div class="cert-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-axis="x">
+                            <i class="fas fa-spinner"></i>
+                            <div>
+                                <h4>PL-300 Certification Preparation</h4>
+                                <p>In Progress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">A<span>.</span></div>
+                <div class="footer-social">
+                    <a href="mailto:ushasarjun@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/arjun-vg/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Arjun VG. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
