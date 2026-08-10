@@ -554,24 +554,29 @@ nav.scrolled {
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 50px;
-}
-
-.hero-image {
-    flex: 1;
-    height: 100%;
+    padding-right: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+.hero-content .contact-links {
+    justify-content: center;
+}
+
+
+
 
 .img-wrapper {
     position: relative;
