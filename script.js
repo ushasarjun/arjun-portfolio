@@ -1,8 +1,10 @@
 // Initialize AOS (Animate On Scroll)
-AOS.init({
+if (typeof AOS !== "undefined") AOS.init({
     once: true, // whether animation should happen only once - while scrolling down
     offset: 100, // offset (in px) from the original trigger point
 });
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Update Footer Year
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -28,6 +30,10 @@ burger.addEventListener('click', () => {
     
     // Burger Animation
     burger.classList.toggle('toggle');
+    const open = mobileMenu.classList.contains('active');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    mobileMenu.inert = !open;
 });
 
 // Close mobile menu when a link is clicked
@@ -35,12 +41,25 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
         burger.classList.remove('toggle');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Open navigation');
+        mobileMenu.inert = true;
     });
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        mobileMenu.classList.remove('active');
+        burger.classList.remove('toggle');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Open navigation');
+        mobileMenu.inert = true;
+    }
 });
 
 // Dynamic Particles Background
 const canvas = document.getElementById('bg-canvas');
-if (canvas) {
+if (canvas && !reducedMotion) {
     const ctx = canvas.getContext('2d');
     let particlesArray;
 
@@ -136,23 +155,6 @@ if (canvas) {
     animateParticles();
 }
 
-// Progress Bar Animation Observer
-const progressBars = document.querySelectorAll('.skill-progress-bar');
-const progressObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const bar = entry.target;
-            const targetWidth = bar.getAttribute('data-width');
-            bar.style.width = targetWidth;
-            observer.unobserve(bar);
-        }
-    });
-}, { threshold: 0.5 });
-
-progressBars.forEach(bar => {
-    progressObserver.observe(bar);
-});
-
 // Number Counter Animation
 const statNumbers = document.querySelectorAll('.stat-number');
 const statObserver = new IntersectionObserver((entries, observer) => {
@@ -209,8 +211,8 @@ const magneticElements = document.querySelectorAll('.btn-primary, .magnetic-badg
 magneticElements.forEach(el => {
     el.addEventListener('mousemove', (e) => {
         const position = el.getBoundingClientRect();
-        const x = e.pageX - position.left - position.width / 2;
-        const y = e.pageY - position.top - position.height / 2;
+        const x = e.clientX - position.left - position.width / 2;
+        const y = e.clientY - position.top - position.height / 2;
         el.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
     });
 
@@ -266,46 +268,6 @@ scrambleTexts.forEach(el => {
 
 
 
-// Initialize RPA Bar Chart
-const ctxBar = document.getElementById('rpaBarChart');
-if (ctxBar) {
-    new Chart(ctxBar, {
-        type: 'bar',
-        data: {
-            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-            datasets: [{
-                label: 'Manual Hours Saved',
-                data: [450, 600, 800, 1150],
-                backgroundColor: 'rgba(239, 35, 60, 0.8)',
-                borderRadius: 5
-            }, {
-                label: 'Bots Deployed',
-                data: [2, 5, 8, 12],
-                backgroundColor: 'rgba(43, 45, 66, 0.8)',
-                borderRadius: 5
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    grid: { color: 'rgba(0,0,0,0.05)' }
-                },
-                x: {
-                    grid: { display: false }
-                }
-            },
-            plugins: {
-                legend: {
-                    position: 'top',
-                    labels: { font: { family: "'Poppins', sans-serif" } }
-                }
-            }
-        }
-    });
-}
-
 // Scroll Spy for Active Navbar State
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-links li a');
@@ -344,6 +306,8 @@ if (typewriterEl) {
         'Interactive Dashboards.',
         'Power Automate Flows.',
         'DAX Data Models.',
+        'Reusable Dataflows.',
+        'Paginated Reports.',
         'RPA Bots with UiPath.',
         'Enterprise Reports.',
         'Microsoft Fabric Pipelines.'
@@ -378,7 +342,8 @@ if (typewriterEl) {
         setTimeout(typeWrite, typeSpeed);
     }
     
-    setTimeout(typeWrite, 1000);
+    if (reducedMotion) { typewriterEl.textContent = phrases[0]; }
+    else { setTimeout(typeWrite, 1000); }
 }
 
 // ============= BACK TO TOP BUTTON =============
@@ -413,7 +378,7 @@ sectionTitles.forEach(title => {
 
 // ============= PARALLAX MOUSE MOVE ON HERO =============
 const hero = document.querySelector('.hero');
-if (hero) {
+if (hero && !reducedMotion) {
     hero.addEventListener('mousemove', (e) => {
         const floatIcons = document.querySelectorAll('.float-icon');
         const x = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -455,7 +420,7 @@ revealElements.forEach(el => {
 });
 
 // ============= TILT EFFECT ON ALL BENTO CARDS =============
-if (typeof VanillaTilt !== 'undefined') {
+if (!reducedMotion && typeof VanillaTilt !== 'undefined') {
     VanillaTilt.init(document.querySelectorAll('.bento-card, .radar-container, .edu-card'), {
         max: 5,
         speed: 400,
@@ -500,7 +465,7 @@ document.body.appendChild(pageTransition);
 // Intercept internal links for smooth page transition
 document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('mailto') && !href.startsWith('tel') && !href.startsWith('http')) {
+    if (!link.hasAttribute('download') && href && !href.startsWith('#') && !href.startsWith('mailto') && !href.startsWith('tel') && !href.startsWith('http')) {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             pageTransition.classList.add('active');
